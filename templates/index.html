@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}"> -->
+    <title>FIR registration</title>
+</head>
+<body>
+    <div class="main">
+        <div class="bg">
+            <div class="mid">
+                <form autocomplete="off">
+                    <div class="main-div">
+                        <div class="div col-1">
+                            <marquee behavior="alternate" scrollamount="10">
+                                <h1><i>Welcome to the Website.</i></h1>
+                            </marquee>
+                        </div>
+                        <div class="div col-2">
+                            Name:
+                            <br>
+                            <input type="text" id="name" placeholder="Name" >
+                            <br>
+                            Phone No.:
+                            <br>
+                            <input type="text" id="phone" placeholder="94xxxxxx67" onkeyup="limitText(this, 10);" onblur="checkTextLength(this, 10);">
+                            <br>
+                            Address:
+                            <br>
+                            <input type="text" id="address" placeholder="Address">
+                            <br><br><br><br>
+                            To register your complaint , Click next
+                        </div>
+                        <div class="div col-3">
+                            Complaint
+                            <br><br>
+                            <textarea name="complaint" id="complaint" rows="20" cols="30" placeholder="Enter your complaint"></textarea>
+                        </div>
+                        <div class="div col-4">
+                            <center><h2>Verify</h2></center>
+                            <div>
+                                <span>Name:</span>
+                                <span id="check_name"></span>
+                                <br>
+                            </div>
+                            <div>
+                                <span>Phone no.:</span>
+                                <span id="check_phone"></span>
+                                <br>
+                            </div>
+                            <div>
+                                <span>Address:</span>
+                                <span id="check_address"></span>
+                                <br>
+                            </div>
+                            <div>
+                                <span>Complaint:</span>
+                                <span id="check_complaint"></span>
+                                <br>
+                            </div>
+                            <div>
+                                <span>Date:</span>
+                                <span id="check_date"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="controls">
+                    <button onclick="change(0)">Previous</button>
+                    <button onclick="change(1)">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/js/index.js"></script>
+    <!-- <script src="{{ url_for('static',filename='styles/js/index.js') }}"></script> -->
+    
+    
+</body>
+</html>
